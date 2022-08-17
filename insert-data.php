@@ -7,7 +7,7 @@
  *      Line 11: the submit button doesn't match the value in index.html
  *      Line 12: $_POST['tv-show'] contains a meaningful value (not null, is alphanumeric, no HTML/script/SQL)
  */
-$is_post_request = true;
+$is_post_request = 'POST';
 $is_expected_submission_action = true;
 $has_valid_data = true;
 
@@ -23,7 +23,7 @@ if (!$valid) {
  * @TODO: Insert validated submission data into the `tv_shows` table on line 26
  *      Optionally use a try catch block, and display error messages to the user.
  *      Optionally increment the show `count` if the name is already stored.
- */
+ */ 
 $pdo = new \PDO('sqlite:tv_shows.db');
 
 /**
